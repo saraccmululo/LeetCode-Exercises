@@ -1,4 +1,4 @@
-const maximumWealth = ([]) => {
+const maximumWealth = (accounts) => {
   let maxCustomerWealth = 0;
 
   for (let i = 0; i < accounts.length; i++) {//Loop through each customer (or item) of the array (0,1,2).
@@ -16,4 +16,4 @@ const maximumWealth = ([]) => {
   return maxCustomerWealth;
 }
 
-const accounts = [[7,1,3], [2,8,7], [1,9,5]];
+console.log(maximumWealth([[7,1,3], [2,8,7], [1,9,5]]));
