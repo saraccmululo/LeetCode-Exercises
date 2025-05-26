@@ -1,5 +1,4 @@
-
-  function maximumWealth([]) {
+const maximumWealth = ([]) => {
   let maxCustomerWealth = 0;
 
   for (let i = 0; i < accounts.length; i++) {//Loop through each customer (or item) of the array (0,1,2).
