@@ -15,7 +15,7 @@ console.log(findNumbers(nums))
 
 //Solution using .filter()
 var findNumbers = function(nums) {
-  evenNumbers=nums.filter(num=>num.toString().length %2===0)
+  const evenNumbers=nums.filter(num=>num.toString().length %2===0)
    return evenNumbers.length;
 };
 
