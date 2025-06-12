@@ -21,7 +21,7 @@ function replaceElements(arr) {
   let max = -1; // Last element becomes -1
   for (let i = arr.length - 1; i >= 0; i--) {
     let current = arr[i]; // Save current value before overwriting
-    arr[i] = max;         // Replace current with the greatest on its right
+    arr[i] = max;    // Replace current with the greatest on its right
     if (current > max) {
       max = current;      // Update max for the next iteration
     }
