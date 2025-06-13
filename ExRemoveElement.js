@@ -11,13 +11,14 @@ var removeElement = function(nums,val) {
 } 
 
 
-//Solution to create a new array:
+//Solution creating a new array:
 /* var removeElement = function(nums,val) {
   nums=nums.filter(num=>num!=val);
   const k=nums.length;
   return k;
 } */
 
+nums = [0,1,2,2,3,0,4,2], val = 2
+console.log(removeElement(nums))
+//Output: 5, nums = [0,1,4,0,3,_,_,_]
 
-nums = [3,2,2,3], val = 3;
-console.log(removeElement(nums, val));
