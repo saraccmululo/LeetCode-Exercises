@@ -34,3 +34,23 @@ If instead, you want to know how much is left to walk (sumRight[i]), you need to
 
 const nums = [1,7,3,6,5,6]
 console.log(pivotIndex(nums))
+
+//OPTIMIZED SOLUTION  
+var pivotIndex = function(nums) {
+  let total=nums.reduce((acc,num)=>acc+num,0);
+  let leftSum=0;
+
+  for(let i=0; i<nums.length; i++) {
+    let rightSum=total-leftSum-nums[i];//except the current number nums[i] because exercise asked to not include it(strictly to the left/right).
+    if(leftSum===rightSum) {
+      return i;
+    }
+    leftSum += nums[i];
+  }
+  return -1;//no pivot found
+}
+
+/*leftSum always reflects the sum before index i. 
+Then you check against rightSum. 
+Only after the check do you update leftSum to prepare for the next index.
+--It’s a clever pattern: check before updating — and it’s exactly what makes the loop accurate for pivot index checking.  */
