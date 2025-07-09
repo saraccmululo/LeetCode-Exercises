@@ -1,2 +1,2 @@
 # LeetCode-Exercises
-Learning algorithm by solving LeetCode exercises.
+Learning algorithms and data structures by solving LeetCode exercises.
