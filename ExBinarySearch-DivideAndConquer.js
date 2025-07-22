@@ -1,11 +1,11 @@
 function binarySearch(arr, val){
 let left=0;
 let right=arr.length-1;
-while(left<=right){
-  let average=Math.floor((left+right)/2);
-  if(val===arr[average]) return average
-  if(val>arr[average]) left=average+1;
-  if(val<arr[average]) right=average-1;
+while(left<=right){//includes the case when left === right, allowing us to check the last remaining element.
+  let averageIndex=Math.floor((left+right)/2);
+  if(val===arr[averageIndex]) return averageIndex
+  if(val>arr[averageIndex]) left=averageIndex+1;
+  if(val<arr[averageIndex]) right=averageIndex-1;
 }
 return -1
 }
