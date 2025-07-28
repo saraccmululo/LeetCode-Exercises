@@ -55,7 +55,7 @@ class DoublyLinkedList {
       this.head.prev = null; //severs the new head prev connection with the old head
       oldHead.next = null; //severs the old head next connection with the new head
     }
-    length--;
+    this.length--;
     return oldHead;
   }
 
