@@ -22,25 +22,25 @@ class SinglyLinkedList {
       this.tail = this.head; //head and tail will be the same thing for the 1st element.
     } else {
       //if list is not empty, add another node at the end:
-      this.tail.next = newNode;
+      this.tail.next = newNode;//make the connection from the second-to-last node to the new node (that is the last node now).
       this.tail = newNode;
     }
     this.length++;
     return this;
   }
 
-  pop() {
+  pop() {//needs to loop through the entire list to find the last node
     if (!this.head) return undefined;
-    let current = this.head; //both current element and new tail will start as the first element/head.
+    let current = this.head; //start looping through the head.Both current and new tail will start as the first/head element.
     let newTail = current;
 
-    while (current.next) {
-      //while proximo elemento existir, make newTail ficar no lugar de current and then move  current forward to the next element (newTail will always lag behind current).
-      newTail = current; // local variable, no this.
-      current = current.next; // local variable, no this.
-    }
+    while (current.next) {//pára no penultimo elemento
+      //while proximo elemento existir(está no penultimo), make newTail ficar no lugar de current and then move  current forward to the next element (newTail will always lag behind current).
+      newTail = current; 
+      current = current.next; 
+    }//at the end of the loop, newTail will be at the penultimo elemento and current will be the last.
     this.tail = newTail;
-    this.tail.next = null; //removes current from the list
+    this.tail.next = null; //severs the link with the last element and removes it from the list
     this.length--; //updates the list length
     if (this.length === 0) {
       // if list is empty, reset head and tail to be null.
