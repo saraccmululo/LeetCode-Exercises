@@ -1,4 +1,4 @@
-var merge = function(nums1, m, nums2, n) {Add commentMore actions
+var merge = function(nums1, m, nums2, n) {
     const filterNums1=nums1.slice(0, m);
     const filterNums2=nums2.slice(0, n);
     const mergedArr=filterNums1.concat(filterNums2).sort((a,b)=> a-b);
